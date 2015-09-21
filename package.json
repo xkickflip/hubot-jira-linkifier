@@ -1,7 +1,7 @@
 {
   "name": "hubot-jira-linkifier",
-  "description": "Hubot listens for an occurence of your JIRA project codes and responds with full clickable links to the tickets.",
-  "version": "0.0.0",
+  "description": "Hubot listens for an occurence of your JIRA project prefixes + a number and responds with full clickable links to the tickets.",
+  "version": "0.0.1",
   "author": "Chris Coveney <xkickflip@gmail.com>",
   "license": "MIT",
 
