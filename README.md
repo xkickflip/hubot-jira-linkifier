@@ -1,4 +1,4 @@
-# hubot-jira-linkifier [![Build Status](https://travis-ci.org/xkickflip/hubot-jira-linkifier.svg?branch=master)](https://travis-ci.org/xkickflip/hubot-jira-linkifier)
+# hubot-jira-linkifier [![Build Status](https://travis-ci.org/xkickflip/hubot-jira-linkifier.svg?branch=master)](https://travis-ci.org/xkickflip/hubot-jira-linkifier) [![Code Climate](https://codeclimate.com/github/xkickflip/hubot-jira-linkifier/badges/gpa.svg)](https://codeclimate.com/github/xkickflip/hubot-jira-linkifier)
 
 Hubot listens for a list of your JIRA project prefixes like "DEV-123" and responds with full clickable links to the tickets. It specifically does not connect to Jira's API and just builds the link so that it responds as quickly as possible.
 
