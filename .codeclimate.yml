@@ -1,0 +1,14 @@
+---
+engines:
+  coffeelint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.coffee"
+exclude_paths:
+- node_modules/**/*
+- script/**/*
+- test/**/*
+- \.*
