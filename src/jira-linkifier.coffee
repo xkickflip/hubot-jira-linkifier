@@ -1,6 +1,7 @@
 # Description
-#   Hubot listens for a list of your Jira project codes and responds with full clickable links to the tickets
-#   that are generated from the configured Jira base url.
+#   Hubot listens for a list of your Jira project codes and responds with full
+#   clickable links to the tickets that are generated from the configured Jira
+#   base url.
 #
 # Configuration:
 #  HUBOT_JIRA_LINKIFIER_JIRA_URL
@@ -8,8 +9,12 @@
 #
 # Commands:
 #   hubot jl url      - Responds with the configured Jira base URL
-#   hubot jl prefixes - Responds with the configured Jira project prefixes to build URLs for e.g. "DEV" for DEV-111
-#   hubot jl regex    - Responds with the configured Jira base URL, currently just for debugging
+#
+#   hubot jl prefixes - Responds with the configured Jira project prefixes to
+#                       build URLs for e.g. "DEV" for DEV-111
+#
+#   hubot jl regex    - Responds with the configured Jira base URL,
+#                       currently just for debugging
 #
 #
 # Author:
@@ -27,7 +32,8 @@ module.exports = (robot) ->
   jiraUrl = jiraUrl.replace /^\s+|\s+$|\/\s*$/g, ""
 
 
-  ticketRegExp = new RegExp "(^|\\s+)(#{prefixes.join('|')})-[0-9]+($|\\s+)", "gi"
+  prefixList = prefixes.join('|')
+  ticketRegExp = new RegExp "(^|\\s+)(#{prefixList})-[0-9]+($|\\s+)", "gi"
 
   robot.hear ticketRegExp, (res) ->
     for ticketMatch in res.match
