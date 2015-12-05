@@ -15,3 +15,6 @@ sudo: false
 addons:
     code_climate:
         repo_token: 2c5810462b0704a2e860c6393cc04b25afd873705550e600584041ac570335ed
+
+after_script:
+  - codeclimate-test-reporter < lcov.info
