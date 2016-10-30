@@ -8,12 +8,12 @@
 #  HUBOT_JIRA_LINKIFIER_PROJECT_PREFIXES
 #
 # Commands:
-#   hubot jl url      - Responds with the configured Jira base URL
+#   hubot jl url      - Responds with the configured JIRA base URL
 #
-#   hubot jl prefixes - Responds with the configured Jira project prefixes to
+#   hubot jl prefixes - Responds with the configured JIRA project prefixes to
 #                       build URLs for e.g. "DEV" for DEV-111
 #
-#   hubot jl regex    - Responds with the configured Jira base URL,
+#   hubot jl regex    - Responds with the configured JIRA base URL,
 #                       currently just for debugging
 #
 #
@@ -53,6 +53,6 @@ module.exports = (robot) ->
   # "jl prefixes": respond with all current Jira prefixes that will be matched
   robot.respond /jl prefixes/i, (res) ->
     if prefixes.length == 0
-      res.send "Jira Prefix list is empty."
+      res.send "JIRA Prefix list is empty."
     else
-      res.send "Currently matching Jira project prefixes: #{prefixes.join(', ')}"
+      res.send "Currently matching JIRA project prefixes: #{prefixes.join(', ')}"

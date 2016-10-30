@@ -16,14 +16,11 @@ describe 'jira-linkifier', ->
 
     require('../src/jira-linkifier')(@robot)
 
+  it "reads HUBOT_JIRA_LINKIFIER_JIRA_URL env variable for the base JIRA URL", ->
+    expect(process.env.HUBOT_JIRA_LINKIFIER_JIRA_URL).to.equal(@jiraUrl)
 
-  # TODO: figure out how to test the config here?
-
-  # it "reads HUBOT_JIRA_LINKIFIER_JIRA_URL env variable for the base Jira URL", ->
-  #   expect(@robot.jiraUrl).to.equal(@jiraUrl)
-
-  # it "reads HUBOT_JIRA_LINKIFIER_PROJECT_PREFIXES env variable for a list of prefixes to match", ->
-  #   expect(@robot.jiraUrl).to.equal(@prefixes)
+  it "reads HUBOT_JIRA_LINKIFIER_PROJECT_PREFIXES env variable for a list of prefixes to match", ->
+    expect(process.env.HUBOT_JIRA_LINKIFIER_PROJECT_PREFIXES).to.equal(@prefixes)
 
 
   it "registers a hear to listener for matching patterns like '<prefix>-<numbers>'", ->
@@ -37,5 +34,3 @@ describe 'jira-linkifier', ->
 
   it "registers a respond listener for 'jl prefixes", ->
     expect(@robot.respond).to.have.been.calledWith(/jl prefixes/i)
-
-
